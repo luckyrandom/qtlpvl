@@ -31,7 +31,7 @@ after_success:
   - git config --global user.name "Chenliang Xu"
   - curl -OL https://github.com/luckyrandom/r-deploy-git/raw/master/deploy-service.sh
   - chmod 755 ./deploy-service.sh
-  - ./deploy-service.sh
+  - ./deploy-service.sh -s master-src -d master -c 'make -k doc'
   
 env:
   global:
